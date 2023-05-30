@@ -8,6 +8,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:vconekt_demo_app/constants/style.dart';
 import 'package:vconekt_demo_app/ui/screens/firestore_products_screen.dart';
+import 'package:vconekt_demo_app/ui/screens/google_cloud_storage.dart';
 import 'package:vconekt_demo_app/ui/screens/home_screen.dart';
 import 'package:vconekt_demo_app/ui/screens/profile_screen.dart';
 
@@ -25,20 +26,21 @@ class NavigationScreenState extends State<NavigationScreen> {
   final _screens = [
     HomeScreen(),
     FireStoreProductsScreen(),
-    ProfileScreen(),
+    const CloudStorageScreen(),
+    const ProfileScreen(),
   ];
 
-  late DateTime currentBackPressTime;
+  DateTime? currentBackPressTime;
   Future<bool> onWillPop() {
-    if (_index != 2) {
+    if (_index != 0) {
       setState(() {
-        _index = 2;
+        _index = 0;
       });
       return Future.value(false);
     } else {
       DateTime now = DateTime.now();
       if (currentBackPressTime == null ||
-          now.difference(currentBackPressTime) > Duration(seconds: 2)) {
+          now.difference(currentBackPressTime!) > const Duration(seconds: 2)) {
         currentBackPressTime = now;
         Fluttertoast.showToast(
             msg: "Double tap to exit", toastLength: Toast.LENGTH_SHORT);
@@ -76,6 +78,10 @@ class NavigationScreenState extends State<NavigationScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.add_box_rounded),
               label: "Products",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.cloud_circle_rounded),
+              label: "Cloud Storage",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),

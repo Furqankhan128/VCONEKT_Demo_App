@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Expanded(
                   flex: 2,
                   child: Column(children: [
-                    Text("${gFirebaseAuth.currentUser?.email!}",style: kDarkBoldLargeStyle,),
+                    FittedBox(child: Text("${gFirebaseAuth.currentUser?.email!}",style: kDarkBoldLargeStyle,textAlign: TextAlign.center)),
                     Divider(),
                   ],),
                 ),

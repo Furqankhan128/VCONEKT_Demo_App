@@ -56,10 +56,11 @@ dependencies:
   equatable: ^2.0.3
   flash: ^2.0.0
   fluttertoast: ^8.2.2
-  flutter_native_splash: ^2.2.9
   firebase_auth: ^4.6.1
   firebase_core: ^2.13.0
   cloud_firestore: ^4.7.1
+  firebase_storage: ^11.2.1
+  file_picker: ^4.1.3
 
 
 dev_dependencies:
@@ -72,10 +73,13 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  flutter_native_splash: ^2.2.9
 
 flutter_native_splash:
   color: "#ffffff"
-  image: images/splash.png
+  image: images/icon.png
+  android: true
+  android_gravity: fill
 
 
 
