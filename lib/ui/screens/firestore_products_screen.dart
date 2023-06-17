@@ -130,9 +130,8 @@ class _FireStoreProductsScreenState extends State<FireStoreProductsScreen> {
                                                       FittedBox(
                                                           fit: BoxFit.scaleDown,
                                                           child: Text(
-                                                            fireStoreProducts[index]
-                                                                    .title ??
-                                                                "",
+                                                            "${fireStoreProducts[index]
+                                                                .title}",
                                                             style:
                                                                 kDarkBoldLargeStyle,
                                                             overflow: TextOverflow

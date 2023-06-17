@@ -70,7 +70,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                   _title = val!;
                 },
                 onChanged: (val) {
-                  _title = val!;
+                  _title = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {
@@ -89,7 +89,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                   _price = val!;
                 },
                 onChanged: (val) {
-                  _price = val!;
+                  _price = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {

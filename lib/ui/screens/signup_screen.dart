@@ -74,7 +74,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   _email = val!;
                 },
                 onChanged: (val) {
-                  _email = val!;
+                  _email = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {
@@ -97,7 +97,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   _password = val!;
                 },
                 onChanged: (val) {
-                  _password = val!;
+                  _password = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {
@@ -118,7 +118,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   _confirmPassword = val!;
                 },
                 onChanged: (val) {
-                  _confirmPassword = val!;
+                  _confirmPassword = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {

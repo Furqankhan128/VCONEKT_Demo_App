@@ -88,7 +88,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   _title = val!;
                 },
                 onChanged: (val) {
-                  _title = val!;
+                  _title = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {
@@ -107,7 +107,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   _price = val!;
                 },
                 onChanged: (val) {
-                  _price = val!;
+                  _price = val;
                 },
                 validator: (val) {
                   if (val=="" || val==null) {

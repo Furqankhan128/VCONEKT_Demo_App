@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         _email = val!;
                       },
                       onChanged: (val) {
-                        _email = val!;
+                        _email = val;
                       },
                       validator: (val) {
                         if (val=="" || val==null) {
@@ -117,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         _password = val!;
                       },
                       onChanged: (val) {
-                        _password = val!;
+                        _password = val;
                       },
                       validator: (val) {
                         if (val=="" || val==null) {

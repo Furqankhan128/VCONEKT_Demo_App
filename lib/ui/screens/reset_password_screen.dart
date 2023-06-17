@@ -69,7 +69,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     onSaved: (val) {
                       _email = val!;
                     },onChanged: (val) {
-                    _email = val!;
+                    _email = val;
                   },
                     validator: (val) {
                       if (val=="" || val==null) {

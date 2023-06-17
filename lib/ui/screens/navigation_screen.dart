@@ -13,6 +13,7 @@ import 'package:vconekt_demo_app/ui/screens/home_screen.dart';
 import 'package:vconekt_demo_app/ui/screens/profile_screen.dart';
 
 import '../../constants/colors.dart';
+import '../ads/ads_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class NavigationScreenState extends State<NavigationScreen> {
     HomeScreen(),
     FireStoreProductsScreen(),
     const CloudStorageScreen(),
+    const AdsScreen(),
     const ProfileScreen(),
   ];
 
@@ -70,7 +72,7 @@ class NavigationScreenState extends State<NavigationScreen> {
             });
           },
           selectedItemColor: kAccentColor,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(MaterialCommunityIcons.home),
               label: "Home",
@@ -82,6 +84,10 @@ class NavigationScreenState extends State<NavigationScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.cloud_circle_rounded),
               label: "Cloud Storage",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.ads_click_rounded),
+              label: "Ads",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
